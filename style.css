@@ -1,0 +1,102 @@
+body{
+margin:0;
+font-family:Segoe UI;
+background:#020617;
+color:white;
+text-align:center;
+overflow-x:hidden;
+}
+
+/* animated background */
+.background{
+position:fixed;
+width:100%;
+height:100%;
+background:linear-gradient(45deg,#0ea5e9,#9333ea);
+filter:blur(150px);
+z-index:-1;
+animation:move 10s infinite alternate;
+}
+
+@keyframes move{
+from{transform:translate(-100px,-100px);}
+to{transform:translate(100px,100px);}
+}
+
+header{
+padding:80px 20px;
+}
+
+h1{
+font-size:45px;
+}
+
+.typing{
+color:#38bdf8;
+height:30px;
+}
+
+.btn{
+background:#38bdf8;
+padding:12px 25px;
+border-radius:30px;
+text-decoration:none;
+color:black;
+transition:.3s;
+}
+
+.btn:hover{
+transform:scale(1.1);
+}
+
+/* glass effect */
+section{
+margin:40px auto;
+width:80%;
+padding:30px;
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(10px);
+border-radius:15px;
+}
+
+/* skills */
+.bar{
+background:#1e293b;
+height:10px;
+border-radius:10px;
+}
+
+.bar span{
+display:block;
+height:10px;
+background:#38bdf8;
+border-radius:10px;
+animation:load 2s;
+}
+
+@keyframes load{
+from{width:0}
+}
+
+/* timeline */
+.timeline div{
+margin:15px;
+padding:15px;
+background:#0f172a;
+border-left:4px solid #38bdf8;
+transition:.4s;
+}
+
+.timeline div:hover{
+transform:translateX(10px);
+}
+
+.contact a{
+display:inline-block;
+margin:10px;
+padding:10px 20px;
+background:#38bdf8;
+color:black;
+border-radius:20px;
+text-decoration:none;
+}

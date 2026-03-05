@@ -1,33 +1,41 @@
-const text = [
-"IT Infrastructure Technician",
-"Network Specialist",
-"MikroTik Engineer",
-"IT Support Expert"
-];
+const words = [
 
-let i=0;
-let j=0;
-let current="";
-let isDeleting=false;
+"IT Infrastructure Engineer",
+"Network Specialist",
+"System Administrator",
+"VoIP Engineer"
+
+]
+
+let i = 0
+let j = 0
+let current = ""
+let deleting = false
 
 function type(){
-current=text[i];
 
-document.querySelector(".typing").textContent=
-current.substring(0,j);
+current = words[i]
 
-if(!isDeleting && j++ === current.length){
-isDeleting=true;
-setTimeout(type,1000);
-return;
+document.querySelector(".typing").textContent =
+current.substring(0,j)
+
+if(!deleting && j++ === current.length){
+
+deleting = true
+setTimeout(type,1000)
+return
+
 }
 
-if(isDeleting && j-- === 0){
-isDeleting=false;
-i=(i+1)%text.length;
+if(deleting && j-- === 0){
+
+deleting = false
+i = (i+1)%words.length
+
 }
 
-setTimeout(type,isDeleting?50:100);
+setTimeout(type,deleting?50:100)
+
 }
 
-type();
+type()
